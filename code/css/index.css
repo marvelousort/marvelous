@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 适配代码 */
+html{
+    /* 代表了100px === 1rem*/
+    font-size: 13.33333vw;
+}
+/* 防止大屏的设备字体过大 */
+@media(min-width:750px){
+    html{
+        font-size: 100px;
+    }
+}
+
+/* 设置页面的基础字体，避免了其他的元素从根元素继承字体大小，影响布局 */
+body{
+    font-size: 0.28rem;
+}
+
+/* 头部 */
+.header{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+
+.header img{
+    width: 1.62rem;
+    height: 0.42rem;
+    margin-left: 0.15rem;
+}
+
+.header .login{
+    width: 0.8rem;
+    height: 0.72rem;
+    color: orange;
+    font-size: 0.28rem;
+    margin-top: 0.4rem;
+}
+.header .search{
+    flex: 1;
+    background-color: ghostwhite;
+    height: 0.41rem;
+    background-color: #f5f5f5;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    border-radius: 10px;
+    font-size: 0.2rem;
+    color: #aaa;
+    padding-left: 0.3rem;
+    padding-top: 0.1rem;
+}
+
+/* 首页轮播 */
+.banner{
+    width: 100%;
+    height: 4.22rem;
+}
+
+.banner .swiper-container{
+    width: 100%;
+    height: 4.22rem;
+}
+
+.banner .swiper-slide img{
+    width: 100%;
+    height: 4.22rem;
+}
+
+/* 控制轮播点 */
+.banner .swiper-container .swiper-pagination .swiper-pagination-bullet{
+    width: 0.8rem;
+    height: 0.14rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.6;
+    border-radius:2px ;
+    margin: 0;
+    margin-bottom: -13px;
+    /* padding-bottom: 0.1rem; */
+}
+.banner .swiper-container .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: orange;
+    opacity: 1;
+}
+
+
+/* 二级导航栏 */
+.nav{
+    /* width: 100%; */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem 0;
+}
+.nav a{
+    display: block;
+    text-decoration: none;
+}
+.nav .item{
+    width: 25%;
+    height: 1.88rem;
+    font-size: 0.3rem;
+}
+.item .item-img{
+    width: 0.915rem;
+    height: 0.915rem;
+    background: url(../images/nav.png);
+    background-size: 3.75rem 1.86rem;
+    margin: 0.2rem auto; 
+}
+
+.nav .item:nth-child(2) .item-img{
+    background-position: 0 -0.915rem;
+}
+.nav .item:nth-child(3) .item-img{
+    background-position: -1.84rem -0.915rem;
+}
+.nav .item:nth-child(4) .item-img{
+    background-position:  -0.915rem -0.915rem;
+}
+.nav .item:nth-child(5) .item-img{
+    background-position:  -0.915rem 0;
+}
+.nav .item:nth-child(6) .item-img{
+    background-position:  -1.84rem 0;
+}
+.nav .item:nth-child(7) .item-img{
+    background-position:  -2.77rem 0;
+}
+.nav .item:nth-child(8) .item-img{
+    background-position:  -2.77rem -0.915rem;
+}
+
+/* 推荐攻略 */
+.suggest{
+    /* width: 100%; */
+    height: 0.4rem;
+    margin-left: 0.3rem;
+    border-left: 3px solid orange;
+    font-size: 0.40rem;
+    font-weight: 800;
+    line-height: 0.4rem;
+    padding-left: 0.06rem;
+    background-color: white;
+}
+
+/* 列表布局 */
+.list .item{
+    /* width: 100%; */
+    padding: 0.14rem;
+    font-size: 0.20rem;
+    color: #aaa;
+}
+.list .title{
+    padding: 0.1rem 0.4rem;
+    padding-right: 1.5rem;
+    font-size: 0.4rem;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.list .item .content{
+    display: flex;
+    padding: 0 0.2rem;
+}
+
+.list .content img{
+    width: 2.6rem;
+    height: 1.8rem;
+}
+
+.list .content .info{
+    letter-spacing: 1px;
+    margin-left: 0.28rem;
+    width: 4rem;
+    height: 1.8rem;
+    position: relative;
+    font-size: 0.28rem ;
+}
+
+.list .content .desc{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    width: 4rem;
+    height: 1.05rem;
+    line-height: 0.35rem;
+}
+
+.list .info .see{
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    font-size: 0.18rem;
+}
+
+.list .info .user-info{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 0.18rem;
+}
+.list .item hr{
+    margin-top: 0.1rem;
+}
+.list .item .user-info img{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.1rem;
+    margin-bottom: -0.05rem;
+}
+
+
+/* 底线 */
+.more{
+    width: 100%;
+    text-align: center;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: blue;
+}
+
+
+.company-info{
+    width: 100%;
+    height: 2rem;
+    background-color: #666;
+}
+
+
+/* loading */
+.loading{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: fixed;
+    left: 2rem;
+    top: 5rem;
+    display: none;
+}
+
+.loading img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
